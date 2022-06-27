@@ -9,4 +9,4 @@ ENV PERSON_NAME="Violetta"
 
 WORKDIR /home
 
-ENTRYPOINT ["/usr/bin/python3"]
+ENTRYPOINT ["/usr/bin/python3", "./hello.py"]
