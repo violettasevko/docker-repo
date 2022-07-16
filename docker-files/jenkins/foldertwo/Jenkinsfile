@@ -1,0 +1,22 @@
+//Run Docker build
+properties ([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+        label 'main'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("create docker image") {
+            steps {
+                echo "start building image"
+                dir ('testjenkins') {
+                    sh 'docker build'
+                }            
+            }
+        }
+    }
+}
