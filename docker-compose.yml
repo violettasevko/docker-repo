@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    image: nginx
+#    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginx
+    ports:
+#       - '8081:8081'
+      - '80:8081'
+    volumes:
+      - "./nginx_proxy.conf:/etc/nginx/nginx.conf:ro"
