@@ -4,6 +4,7 @@ services:
     image: nginx
     container_name: nginx
     ports:
+#8081
       - '8081:8081'
     volumes:
       - "./nginx-proxy.conf:/etc/nginx/nginx.conf:ro"
