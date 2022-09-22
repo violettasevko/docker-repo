@@ -8,4 +8,5 @@ services:
       - '8081:8081'
     volumes:
       - "./nginx-proxy.conf:/etc/nginx/nginx.conf:ro"
-#sudo docker run -p 8081:8081 -v ./nginx-proxy.conf:/etc/nginx/nginx.conf:ro --name nginx nginx
+#sudo docker run -p 8081:8081 -v /home/ec2-user/nginx-proxy.conf:/etc/nginx/nginx.conf:ro -detach --name nginx nginx
+
