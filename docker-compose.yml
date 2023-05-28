@@ -2,7 +2,7 @@ version: '3'
 services:
   app:
     image: nginx
-    container_name: nginx
+    contain er_name: nginx
     ports:
 #8081
       - '8081:8081'
